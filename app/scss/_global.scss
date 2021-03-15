@@ -1,0 +1,15 @@
+body{
+    font-size: 16px;
+    line-height: 26px;
+    @extend %rubik-400;
+     color: $devault-color;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}

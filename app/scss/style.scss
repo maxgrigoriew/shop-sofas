@@ -1,0 +1,112 @@
+@import 'vars';
+@import 'reset';
+@import 'global';
+@import 'vars';
+.header{
+  &__inner{
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  }
+}
+.menu__list{
+  display: flex;
+  &-item:not(:last-child){
+    margin-right: 30px; 
+  }
+  &-link{
+      @extend %rubik-700;
+    font-size: 15px;  
+    color: $accent-color;
+  }
+}
+.nav-panel{
+  &__inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 320px;
+ 
+  
+  }
+  &__link-search{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #edf1f4;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+  }
+  &__link-heart{
+    padding: 0 27px 0 43px;
+    background: #fcd7b6;
+    height: 50px;
+    display: flex;
+    align-items:center;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    position: relative;
+    &::after{
+      content:'';
+      height: 34px;
+      width: 1px;
+      background:#fde7d3;
+      position: absolute;
+      right: 0;
+    }
+  }
+  &__heart-num, &__cart-num{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background:#fff;
+    border-radius: 50%;
+    right: -7px;
+    top: -7px;
+    font-size: 10px;
+    line-height: 15px;
+    @extend %dmsans-400;
+    text-align: center;
+    color: $accent-color;
+  }
+  &__heart-num{
+    right: 20px;
+    top: 11px;
+  }
+  &__cart-num{
+    left: 40px;
+    top: 11px;
+  }
+  &__link-cart{
+    padding: 0 43px 0 27px;
+    background: #fcd7b6;
+    height: 50px;
+    display: flex;
+    align-items:center;
+       border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    position: relative;
+  }
+ 
+  
+  &__wrapper{
+    border-radius: 40px; 
+    display: flex;  
+    align-items:center;
+    justify-content: space-between;
+  }
+  &__link-btn{
+      width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #a3bbc8;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+  }
+}
+
+  
+@import 'media';
