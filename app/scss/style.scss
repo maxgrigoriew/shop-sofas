@@ -1,3 +1,4 @@
+@import 'uikit';
 @import 'vars';
 @import 'reset';
 @import 'global';
@@ -105,6 +106,18 @@
     display: flex;
     justify-content: center;
     align-items:center;
+    transition: all 0.5s ease-in-out;
+    &:hover{
+      background: #fff;
+      border: 1px solid #a3bbc8;
+    }
+    & path{
+      transition: all 0.5s ease-in-out;
+      fill:#fff;
+    }
+    &:hover path{
+     fill: #a3bbc8;
+    }
   }
 }
 
