@@ -30,13 +30,13 @@ function browsersync() {
  
 function scripts() {
 	return src([ // Берём файлы из источников
-		'node_modules/jquery/dist/jquery.min.js', // Пример подключения библиотеки
+		'node_modules/jquery/dist/jquery.js', // Пример подключения библиотеки
 		'app/js/main.js',
-		'app/js/uikit.js',// Пользовательские скрипты, использующие библиотеку, должны быть подключены в конце
+		// Пользовательские скрипты, использующие библиотеку, должны быть подключены в конце
 		])
 	.pipe(concat('main.min.js')) // Конкатенируем в один файл
-	.pipe(uglify()) // Сжимаем JavaScript
-	.pipe(dest('dist/js/')) // Выгружаем готовый файл в папку назначения
+	// .pipe(uglify()) // Сжимаем JavaScript
+	.pipe(dest('app/js/')) // Выгружаем готовый файл в папку назначения
 	.pipe(browserSync.stream()) // Триггерим Browsersync для обновления страницы
 }
  
@@ -49,7 +49,7 @@ function styles() {
 	.pipe(concat('style.min.css')) // Конкатенируем в файл app.min.js
 	.pipe(autoprefixer({ overrideBrowserslist: ['last 10 versions'], grid: true })) // Создадим префиксы с помощью Autoprefixer
     .pipe(scss({ outputStyle: 'compressed' }))
-	.pipe(dest('dist/css/')) // Выгрузим результат в папку "app/css/"
+	.pipe(dest('app/css/')) // Выгрузим результат в папку "app/css/"
 	.pipe(browserSync.stream()) // Сделаем инъекцию в браузер
 }
  

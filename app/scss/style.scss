@@ -5,7 +5,7 @@
 @import 'vars';
 .header{
   &__inner{
-  padding: 50px 0;
+  padding: 50px 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -121,5 +121,216 @@
   }
 }
 
+.top-cards{
+  padding: 45px 0;
+  background: #fef7f0;
+  &__inner{
+    display: flex;
+    justify-content: space-around;
+  }
+  &__item{
+    display: flex;
+  }
+  &__img{
+    margin-right: 25px;
+  }
+   &__info-title{
+    font-size: 18px;
+    @extend %dmsans-700;
+    margin-bottom: 10px;
+  }
+  &__info-text{
+    @extend %dmsans-400;
+    font-size: 16px;
+    max-width: 200px;
+  }
+}
+
+
+
+.footer{
+  &__top{
+    padding: 90px 0 70px;
+    display: flex;
+    border-bottom: 1px solid #dae4e9; 
+  }
+  
+  &__logo{
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+  &__top-contact{
+    width: 200px;
+    margin-right: 100px;
+  }
+  &__top-adress{
+    margin-bottom: 10px;
+  }
+  &__top-tel{
+    color: $devault-color;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 10px;
+  }
+  &__top-mail{
+    color: $devault-color;
+  }
+  &__top-title{
+    color: #1f2044;
+    margin-bottom: 30px;
+    @extend %dmsans-700;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+  &__top-item{
+    width: 270px;
+    margin-right: 30px;
+    &:not(:first-child){
+      padding-top: 16px;
+    }
+  }
+  &__top-list__link{
+    color: $devault-color;
+    margin-bottom: 10px;
+  }
+  &__top-forms{
+    width: 270px;
+    margin-right: 0;
+    
+  }
+  &__top-item__text{
+    margin-bottom: 40px;
+    @extend %dmsans-400;
+  }
+   &__top-item__form{
+     display: flex;
+   }
+  &__top-item__input{
+    width: 100%;
+    max-width: 170px;
+    height: 40px;
+    padding: 15px;
+      @extend %dmsans-400;
+    font-size: 12px;
+    border:none;
+    background: #fef7f0;
+    &::placeholder{
+      color: $title-color;
+    }
+  }
+   &__top-item__btn{
+    min-width: 100px;
+    color: #fff;
+    font-size: 14px;
+    @extend %dmsans-400;
+     cursor: pointer;
+     border:none;
+     height: 40px;
+     background: #a3bbc8;
+   }
+   &__bottom{
+     padding: 35px 0;
+     display: flex;
+     justify-content: space-between;
+     align-items:center;
+     font-size: 14px;
+   }
+   &__bottom-menu{
+     display: flex;
+   }
+    &__bottom-item{
+      padding: 0 15px;
+      &:not(:last-child){
+        border-right: 2px solid $devault-color;
+      } 
+      &:last-child{
+        padding-right: 0;
+      }
+    }
+   &__bottom-link{
+     font-size: 14px;
+     color: $devault-color;
+     
+   }
+}
+
+// top-slider
+.top-slider{
+  &__inner{
+    background: #fcd7b6;
+  background-image: url('../images/circle.png');
+  background-repeat: no-repeat;
+  background-position: center right 180px;
+  }
+  &__items{
+  min-height: 820px;
+  }
+  &__item{
+    display: flex;
+    align-items:center;
+     max-width: 1300px;
+    margin: 0 auto;
+  }
+  &__item-content{
+    max-width: 500px;
+  }
+  &__item-title{
+    font-size: 72px;
+    line-height: 1;
+    color: $accent-color;
+    @extend %rubik-700;
+    margin-bottom: 40px;
+  }
+  &__item-text{
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  &__item-btn{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items:center;
+    min-width: 200px;
+    height: 60px;
+    padding: 20px 27px 20px 25px;
+    color: #fff;
+    font-size: 15px;
+    background: #a3bbc8;
+    position: relative;
+    padding-left: 27px;
+    & svg{
+      text-align: right;
+    }
+    & path{
+      fill:#fff;
+      text-align: right
+    }
+  }
+}
+
+ .uk-slider-nav{
+   position: absolute;
+   bottom: 45px;
+   left: 50%;
+   transform: translateX(-50%);
+  display: flex;
+   li{
+    margin: 0 5px;
+    }
+    li.uk-active a{
+      background: #fff;
+    }
+    a{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background: #fde3cc;
+    border-radius: 50%;
+      font-size: 10px;
+      color: $accent-color;
+      text-align: center;
+      display: inline-block;
+      @extend %rubik-500;
+    }
+}
   
 @import 'media';
