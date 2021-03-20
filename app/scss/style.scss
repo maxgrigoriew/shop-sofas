@@ -5,16 +5,21 @@
 @import 'vars';
 .header{
   &__inner{
-  padding: 50px 15px;
+    max-width: 1800px;
+    margin: 0 auto;
+  padding: 45px 15px 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  }
+  &__logo{
+    margin-right: 150px;
   }
 }
 .menu__list{
   display: flex;
   &-item:not(:last-child){
-    margin-right: 30px; 
+    margin-right: 35px; 
   }
   &-link{
       @extend %rubik-700;
@@ -135,6 +140,7 @@
     margin-right: 25px;
   }
    &__info-title{
+     margin-top: -5px;
     font-size: 18px;
     @extend %dmsans-700;
     margin-bottom: 10px;
@@ -257,19 +263,26 @@
 // top-slider
 .top-slider{
   &__inner{
-    background: #fcd7b6;
-  background-image: url('../images/circle.png');
-  background-repeat: no-repeat;
-  background-position: center right 180px;
+  background: #fcd7b6;
+ padding-bottom: 45px;
+  }
+  &__container{
+    max-width: 1430px;
+    margin: 0 auto;
   }
   &__items{
-  min-height: 820px;
+  min-height: 745px;
   }
   &__item{
+     background-image: url('../images/circle.png');
+  background-repeat: no-repeat;
+      background-position: top 93% right 17px;
     display: flex;
     align-items:center;
-     max-width: 1300px;
+    justify-content: space-between;
     margin: 0 auto;
+    padding:  0 130px;
+    
   }
   &__item-content{
     max-width: 500px;
@@ -279,11 +292,13 @@
     line-height: 1;
     color: $accent-color;
     @extend %rubik-700;
-    margin-bottom: 40px;
+    margin-bottom: 28px;
+    padding-top: 10px;
   }
   &__item-text{
     font-size: 18px;
     margin-bottom: 40px;
+    max-width: 380px;
   }
   &__item-btn{
     display: inline-flex;
@@ -305,14 +320,14 @@
       text-align: right
     }
   }
+  &__item-img{
+    padding-top: 6%;
+  }
 }
 
  .uk-slider-nav{
-   position: absolute;
-   bottom: 45px;
-   left: 50%;
-   transform: translateX(-50%);
   display: flex;
+  justify-content: center;
    li{
     margin: 0 5px;
     }
