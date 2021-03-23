@@ -9,6 +9,11 @@ body{
     margin: 0 auto;
     padding: 0 15px;
 }
+.container-fluid{
+    max-width: 1800px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
 a{
     text-decoration: none;
     display: inline-block;
@@ -25,3 +30,46 @@ a:hover{
 .main{
     flex: 1 0 auto;
 }
+.title{
+    font-size: 36px;
+    @extend %dmsans-700;
+    color: $darc-color;
+}
+
+.btn{
+     display: inline-flex;
+    justify-content: space-between;
+    align-items:center;
+    min-width: 179px;
+    height: 60px;
+    padding: 20px 18px 20px 20px;
+    color: #fff;
+    font-size: 15px;
+    background: #a3bbc8;
+    position: relative;
+     transition: all 0.5s ease-in-out;
+}
+.btn--transparent{
+     background: transparent;
+     border: 1px solid #b3b7b5;
+     border-radius: 5px;
+     color: $accent-color;
+}
+
+.filter-buttons{
+    display: flex;
+    justify-content: center;
+    
+}
+.filter-button{
+    background: none;
+    cursor:pointer;
+    border:none;
+    color: $devault-color;
+}
+.filter-button.mixitup-control-active{
+    color: $darc-color;
+}
+.filter-button:not(:last-child){
+    margin-right: 15px;
+  }

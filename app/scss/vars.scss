@@ -1,6 +1,7 @@
 $devault-color: #8b8b8b;
 $accent-color: #243f4d;
 $title-color: #234969;
+$darc-color: #191919;
 
 %dmsans-700{
     font-family: 'DM Sans', sans-serif;
@@ -9,6 +10,10 @@ $title-color: #234969;
 %dmsans-400{
     font-family: 'DM Sans';
     font-weight: 400;
+}
+%dmsans-500{
+    font-family: 'DM Sans';
+    font-weight: 500;
 }
 %rubik-700{
     font-family: 'Rubik', sans-serif;
@@ -25,3 +30,9 @@ $title-color: #234969;
 
 // font-family: 'DM Sans', sans-serif;
 // font-family: 'Rubik', sans-serif;s
+@function max($numbers...) {
+@return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+@return m#{i}n(#{$numbers});
+}
